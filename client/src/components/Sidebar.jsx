@@ -106,6 +106,7 @@ const Sidebar = ({
 
   useEffect(() => {
     setActive(pathname.substring(1));
+    console.log(pathname.substring(1));
   }, [pathname]);
 
   return (
@@ -132,7 +133,7 @@ const Sidebar = ({
             <Box m="1.5rem 2rem 2rem 3rem">
               <FlexBetween color={theme.palette.secondary.main}>
                 <Box display="flex" alignItems="center" gap="0.5rem">
-                  <Typography variant="h4">MarkeTaxis</Typography>
+                  <Typography variant="h4">TestApp</Typography>
                 </Box>
                 {!isNonMobile && (
                   <IconButton onClick={() => setIsSidebarOpen(false)}>
@@ -155,7 +156,7 @@ const Sidebar = ({
                   <ListItem key={text} disablePadding>
                     <ListItemButton
                       onClick={() => {
-                        navigate("/${lcText}");
+                        navigate(lcText);
                         setActive(lcText);
                       }}
                       sx={{
